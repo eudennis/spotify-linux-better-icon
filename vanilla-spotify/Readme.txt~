@@ -1,0 +1,10 @@
+I have spotify-notify in the directory ~/.config/spotify/notify/
+
+The "Exec" line in this file must point to your spotify-notify.py file. And the "Icon" line must point to your spotify_icon.png file.
+
+Open up the .desktop file in a text editor to make the change.
+
+Install the .desktop file with the command:
+
+desktop-file-install /path/to/spotify.desktop
+

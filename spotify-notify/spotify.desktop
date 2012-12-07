@@ -1,0 +1,33 @@
+
+[Desktop Entry]
+Version=1.0
+Name=Spotify
+GenericName=Music Player
+Comment=Stream music through the spotify service.
+Exec=/home/USERNAME/.config/spotify/notify/spotify-notify.py
+Icon=/home/USERNAME/.config/spotify/notify/icon_spotify.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Player;
+
+Actions=PlayPause;Stop;Next;Previous;
+
+X-Desktop-File-Install-Version=0.20
+
+Name[en_US]=spotify
+
+[Desktop Action PlayPause]
+Name=Play/Pause
+Exec=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+[Desktop Action Stop]
+Name=Previous
+Exec=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
+
+[Desktop Action Next]
+Name=Next
+Exec=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+[Desktop Action Previous]
+Name=Previous
+Exec=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
