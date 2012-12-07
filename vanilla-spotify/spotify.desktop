@@ -12,7 +12,7 @@ Categories=AudioVideo;Audio;Player;
 
 Actions=PlayPause;Stop;Next;Previous;
 
-Name[en_US]=spotify
+Name[en_US]=Spotify
 
 [Desktop Action PlayPause]
 Name=Play/Pause

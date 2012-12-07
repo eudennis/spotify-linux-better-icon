@@ -14,7 +14,7 @@ Actions=PlayPause;Stop;Next;Previous;
 
 X-Desktop-File-Install-Version=0.20
 
-Name[en_US]=spotify
+Name[en_US]=Spotify
 
 [Desktop Action PlayPause]
 Name=Play/Pause
