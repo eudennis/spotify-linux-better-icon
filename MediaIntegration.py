@@ -14,16 +14,14 @@ import dbus.mainloop.glib
 def on_mediakey(comes_from, what):
     """ gets called when multimedia keys are pressed down.
     """
-    spotify_interface = 'org.mpris.MediaPlayer2.Player'
-    if what == 'Stop':
-        spotify_bus.Stop(dbus_interface=spotify_interface)
-    elif what == 'Play':
-        spotify_bus.PlayPause(dbus_interface=spotify_interface)
-    elif what == 'Next':
-        spotify_bus.Next(dbus_interface=spotify_interface)
-    elif what == 'Previous':
-        spotify_bus.Previous(dbus_interface=spotify_interface)
-    print what 
+    if what = 'Play':
+        what = 'PlayPause'
+    try:
+        eval('spotify_bus.' + what + "(dbus_interface='org.mpris.MediaPlayer2.Player')")
+    except dbus.DBusException:
+        traceback.print_exc()
+        
+
 
 ##
 #Start the show
