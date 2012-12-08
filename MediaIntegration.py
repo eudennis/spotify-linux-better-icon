@@ -3,25 +3,24 @@
 """
 
 import sys
-from traceback import print_exc
+import traceback
 import gobject
 import dbus
 import dbus.service
 import dbus.mainloop.glib
+
 ## 
 # Define Functions
 ##
 def on_mediakey(comes_from, what):
     """ gets called when multimedia keys are pressed down.
     """
-    if what = 'Play':
+    if what == 'Play':
         what = 'PlayPause'
     try:
         eval('spotify_bus.' + what + "(dbus_interface='org.mpris.MediaPlayer2.Player')")
     except dbus.DBusException:
         traceback.print_exc()
-        
-
 
 ##
 #Start the show
